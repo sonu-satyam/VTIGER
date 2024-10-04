@@ -4,7 +4,7 @@ from selenium import webdriver
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser",action = "store", default = "chrome")
+    parser.addoption("--browser",action = "store", default = "firefox")
 
 @pytest.fixture
 def driver_(request):
