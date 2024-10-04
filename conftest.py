@@ -2,10 +2,11 @@ import pytest
 from selenium import webdriver
 
 
-
+# takes data from cmd prompt
 def pytest_addoption(parser):
     parser.addoption("--browser",action = "store", default = "firefox")
 
+# passes driver to the test cases
 @pytest.fixture
 def driver_(request):
     browser = request.config.getoption("--browser")
