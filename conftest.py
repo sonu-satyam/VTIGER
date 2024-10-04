@@ -6,7 +6,7 @@ from selenium import webdriver
 def pytest_addoption(parser):
     parser.addoption("--browser",action = "store", default = "chrome")
 
-@pytest.fixture(scope = "module")
+@pytest.fixture
 def driver_(request):
     browser = request.config.getoption("--browser")
     if browser.lower() == "chrome":
